@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+* 
+{
+	margin:0;
+	padding: 0;
+}
+
+body
+{
+	font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.navbar 
+{
+	background-color:#39f;
+	border: none;
+	margin-bottom: 0 !important;
+	border-radius: none;
+
+}
+
+.navbar-inverse .navbar-nav>li>a 
+{
+		  color: white;
+          font-size:12px;
+          font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;	
+}
+
+.navbar-inverse .navbar-nav>li>a:hover
+{
+	background-color:#5DB2FF;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus
+{
+	background-color: #5DB2FF;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a
+{
+	color:#000;
+}
+
+.uk-container.uk-margin-top  {
+margin-top: 10%!important;
+}
+
+.uk-width-medium-1-4.uk-push-1-4.uk-text-center
+{
+	margin-left: 150px !important;
+}
+
+.uk-container.uk-container-center.uk-grid-margin
+{
+	margin-left: 150px !important;
+}
+
+ #map_canvas {
+        width: 270px;
+        height: 275px;
+      }

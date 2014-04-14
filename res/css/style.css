@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+* 
+{
+	margin:0;
+	padding: 0;
+}
+
+body
+{
+	font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.navbar 
+{
+	background-color:#39f;
+	border: none;
+	margin-bottom: 0 !important;
+	border-radius: none;
+
+}
+
+.navbar-inverse .navbar-nav>li>a 
+{
+		  color: white;
+          font-size:12px;
+          font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;	
+}
+
+.navbar-inverse .navbar-nav>li>a:hover
+{
+	background-color:#5DB2FF;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus
+{
+	background-color: #5DB2FF;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a
+{
+	color:#000;
+}
+
+
+.jumbotron
+{
+	 margin-top: 40px;
+}
+
+.jumbotron p
+{
+	font-size: 12px;
+	font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+footer
+{
+	background-color: ;
+	padding:4px 4px 4px 4px;
+}
+
+footer >.container
+{
+	padding: 0px 5px 0px 5px;
+	width:1080px;
+}
+
+.modal-dialog.modal-sm
+{
+	width:401px;
+	height: 590px; 
+}

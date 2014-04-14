@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="NavdiskZ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/icon.png" type="image/png" />
+    <title>NavdiskZ&trade;Premium | The best way to learn creative and technical skills</title>
+    <link href="res/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="res/css/blog.css" type="text/css" rel="stylesheet">
+    <link href="res/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.min.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.almost-flat.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.almost-flat.min.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.gradient.css" rel="stylesheet" type="text/css">
+    <link href="res/uikit/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
+         <script src="res/uikit/js/jquery.js"></script>
+         <script src="res/uikit/js/uikit.js"></script>
+         <script src="res/uikit/js/uikit.min.js"></script>
+
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="res/syntax/js/shCore.js"></script>
+	<script type="text/javascript" src="res/syntax/js/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="res/syntax/css/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+  </head>
+  <body>
+ <nav class="navbar navbar-inverse " role="navigation">
+  <div class="container">
+   <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+            <span class="sr-only">Toggle</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      
+      <a class="navbar-brand" href="index.html" title="NavdiskZ"><img style="width:90px; height:30px; margin-top: -5px; overflow:hidden; " src="img/logo.png"></a>
+    </div>
+     <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Get Started</a></li>
+            <li><a href="portfolio.html" >portfolio</a></li>
+            <li><a href="blog.html" >Blog</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="login.html" >Login</a></li>
+            
+        </ul>
+        </div>
+  </div>
+  </nav>
+    <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+  <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-3-4">
+
+                    <article class="uk-article">
+
+                        <h1 class="uk-article-title">
+                            <a href="#">Foundation for Beginners: Custom Forms and Switches</a>
+                        </h1>
+
+                        <p class="uk-article-meta">Written by Naveen Kumar on 1 April 2014. Posted in <a href="#" >Blog</a></p>
+
+                        <p>
+                            <a href="#"><img width="900" height="300" src="img/blog/blog.jpg" alt="Custom form" title="custom form"></a>
+                        </p>
+
+                        <p>Following on  <a href="http://foundation.zurb.com" target="_blank">Zurb's Foundation</a> , let's now take a look at custom forms and switches. During this tutorial we're going to work on an exercise; a contact form which you can add to your projects or just play around with. Once I built that, we'll move onto other form elements.</p>
+
+                        <h2>The Contact Form</h2>
+
+                        <p>Forms, for me at least, have always been a bit of a pain especially when getting them to fit into My <a>NavdiskZ</a> designs. Foundation makes this whole process easier by including a JavaScript custom form plugin. It's very simple to setup and gives you the ability to easily customise your form elements using CSS.</br><br/><kbd>In order to get the custom forms to function, you'll need to include foundation.forms.js. You'll also need to make sure to include zepto.js and foundation.js above the forms plugin.</kbd></br><br/>The plugin works by hiding each form element itself and spitting out more visually controllable elements like divs and anchor tags. It then passes any interaction to the original hidden element, meaning the form will still function as it was intended. Let's take a look at how that works exactly.</p>
+
+                            <h2>Let Start</h2>
+
+                        <p>In terms of websites, the most common type of form has probably always been the contact form. In this exercise we'll take the standard inputs you may expect to see, plus one or two more unusual examples which could be useful to you in your projects.
+
+                        Take your standard <code>&lt;form&gt;</code> tag. To initiate the <a href="http://www.foundation.zurb.com/docs/components/custom-forms.html" target="_blank" >custom forms</a> plugin we need to add a class of "custom" like so: <code>&lt;form class="custom"&gt;</code>, done. We now have our custom form.
+
+                        To get going you'll need the form tag which holds a two column row, like this:</p><br/>
+                        <pre class="brush: js">
+                        &lt;form class="custom"&gt;
+                          &lt;div class="row"&gt;
+                            &lt;div class="large-6 columns"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="large-6 columns"&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/form&gt;
+                        </pre>
+                        <br/>
+                        <p>Now we'll start with the left column; in the example I have used a drop down to select the salutation, followed by an input box for the name. These use standard tags with a "collapse" class on the row. We follow this up with the email field and a "how you found us" drop down.</p><br/>
+
+                        <pre class="brush: js">
+                            &lt;div class="row collapse"&gt;
+                          &lt;div class="large-3 small-3 columns"&gt;
+                            &lt;select&gt;
+                              &lt;option&gt;Mr.&lt;/option&gt;
+                              &lt;option&gt;Mrs.&lt;/option&gt;
+                              &lt;option&gt;Miss.&lt;/option&gt;
+                              &lt;option&gt;Ms.&lt;/option&gt;
+                              &lt;option&gt;Dr.&lt;/option&gt;
+                            &lt;/select&gt;
+                          &lt;/div&gt;
+                          &lt;div class="large-9 small-9 columns"&gt;
+                            &lt;input type="text" placeholder="Name" /&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                         
+                        &lt;input type="email" placeholder="Email" /&gt;
+                         
+                        &lt;select id="contactDropdown"&gt;
+                          &lt;option DISABLED&gt;How did you find us?&lt;/option&gt;
+                          &lt;option&gt;Google&lt;/option&gt;
+                          &lt;option&gt;A friend told me&lt;/option&gt;
+                          &lt;option&gt;Not sure, where am I?&lt;/option&gt;
+                        &lt;/select&gt;
+                        </pre></br>
+                        <p>
+                            <a href="#"><img width="900" height="300" src="img/blog/blog-2.jpg" alt=""></a>
+                        </p>
+                        </br>
+                        <p>You need to ensure your select element has an id, but apart from that the markup is really straight forward. So to merge this with the form code we first looked at, you'll need to put it in the first div with the "large-6" class.</br>
+
+                        Next up are the elements for the second column. These include the text area, a "spam me" checkbox and a switch, followed finally by the submit button.</p><br/>
+                        <pre class="brush: js">
+                        &lt;textarea placeholder="Message"&gt;&lt;/textarea&gt;
+                            &lt;div class="row"&gt;
+                              &lt;div class="large-6 small-6 columns"&gt;
+                                &lt;label&gt;Send me spam&nbsp;&nbsp;
+                                  &lt;input type="checkbox" CHECKED style="display:none" /&gt;
+                                &lt;/label&gt;
+                              &lt;/div&gt;
+                              &lt;div class="large-3 small-3 columns"&gt;
+                                &lt;label&gt;CC me?&lt;/label&gt;
+                              &lt;/div&gt;
+                              &lt;div class="large-3 small-3 columns end"&gt;
+                                &lt;div class="switch tiny"&gt;
+                                  &lt;input id="x" name="switch-x" type="radio" checked&gt;
+                                  &lt;label for="x" onclick=""&gt;No&lt;/label&gt;
+                                  &lt;input id="x1" name="switch-x" type="radio"&gt;
+                                  &lt;label for="x1" onclick=""&gt;yes&lt;/label&gt;
+                                  &lt;span&gt;&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;input class="button small large-12" type="submit" value="Send Message" /&gt;
+                        </pre></br>
+                        <p>
+                            <a href="#"><img width="900" height="300" src="img/blog/blog-3.jpg" alt=""></a>
+                        </p>
+                        </br>
+                        <p><h2>Switches</h2>
+                        We haven't yet covered <a href="http://http://www.foundation.zurb.com/docs/components/switch.html" target="_blank">switches</a>, so let's do that now.<br/>
+
+                        Switches are a great way of visually toggling inputs. Their structure comprises a div with a "switch" class, followed by your choice of a size. These sizes include "tiny", "small" and "large". You can also set the switch to be rounded with the "rounded" class. The structure itself has two inputs, one for each switch state. These have their own respective labels which Foundation uses for the text inside each state. The inputs need ids and the labels need the coinciding "for" attribute.</p>
+                        <br/>
+                        <pre class="brush: js">
+                        &lt;div class="switch tiny"&gt;
+                          &lt;input id="x" name="switch-x" type="radio" checked&gt;
+                          &lt;label for="x" onclick=""&gt;No&lt;/label&gt;
+                        </pre>
+                        <br/>
+                        <p>That pretty much covers our little contact form, you can take this and play with it or use it in your next project.</p><br>
+
+                        <p>
+                           <h2> Other Form Elements</h2>
+
+                            What else might you need in a web form? To start off we have good old radios, each of which needs to have the same name and a "display:none" property.<br/>
+
+                            <kbd> Note:</kbd> I know this is a horrible inline style, but it's advisable in this case so you don't get that flicker when the stylesheet kicks in.
+                        </p>
+                        <pre class="brush: js">
+                        &lt;input name="radio1" type="radio" style="display:none;" CHECKED /&gt;
+                        &lt;input name="radio1" type="radio" style="display:none;" /&gt;
+                        &lt;input name="radio1" type="radio" disabled style="display:none;"&gt;
+                        </pre><br/>
+                        <p>One of the nicer things about these custom forms is the quick option to create an element which either has an element preceding it or succeeding it. It's a great way to suggest what's already present, or hinting at what kind of user interaction is required</p><br/>
+                       <p>
+                            <a href="#"><img width="600" height="100" src="img/blog/form-4.png" alt=""></a>
+                        </p><br/>
+
+                        <p>Below you can see we have a span element with the "prefix" class, followed by a drop down. You will still need to put these elements in a column structure as the "prefix and "postfix" classes just prevent the elements getting separated. You can also make good use of the "postfix" class in an object such as a search box, whereby you have your text input followed by a button.</p><br/>
+                        <pre class="brush: js">
+                        &lt;div class="row collapse"&gt;
+                              &lt;div class="large-9 small-9 columns"&gt;
+                                &lt;span class="prefix"&gt;http://webdesign.tutsplus&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="large-3 small-3 columns"&gt;
+                                &lt;select&gt;
+                                  &lt;option&gt;.com&lt;/option&gt;
+                                  &lt;option&gt;.co&lt;/option&gt;
+                                  &lt;option&gt;.ca&lt;/option&gt;
+                                &lt;/select&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                        </pre>   </br>
+                        <p>
+                            <h2>Error Messages</h2>
+
+                            Most forms have at least one field which is required, or the form will fail to submit properly. Foundation caters for these validation situations with the "error" class. Simply add this to any input, label, small tag or column and watch as these elements take on a red error style.
+                        </p><br/>
+                        <pre class="brush:js">
+                        &lt;form&lt;
+                                  &lt;div class="row"&lt;
+                                    &lt;div class="large-6 columns"&lt;
+                                      &lt;label class="error"&lt;Error&lt;/label&lt;
+                                      &lt;input type="text" class="error" /&lt;
+                                      &lt;small class="error"&lt;Invalid entry&lt;/small&lt;
+                                    &lt;/div&lt;
+                                    &lt;div class="large-6 columns error"&lt;
+                                      &lt;label&lt;Another Error&lt;/label&lt;
+                                      &lt;input type="text" /&lt;
+                                      &lt;small&lt;Invalid entry&lt;/small&lt;
+                                    &lt;/div&lt;
+                                  &lt;/div&lt;
+                                  &lt;textarea class="error" placeholder="Message..."&lt;&lt;/textarea&lt;
+                                  &lt;small class="error"&lt;Invalid entry&lt;/small&lt;
+                                &lt;/form&lt;
+                        </pre><br/>
+                        <p>To really put this into effect you'll need to grab the <a href="https://github.com/jzaefferer/jquery-validation" target="_blank">jQuery validate plugin</a> and use the required parameter to show these states when a user incorrectly enters information.</p><br/>
+                        <p><h2>Useful Tool</h2>
+                         <p>
+                            <a href="#"><img width="900" height="300" src="img/blog/blog-5.jpg" alt=""></a>
+                        </p><br/>
+
+                            When it comes to the colour choices in Foundation, it's not always easy to get a good combination without the help of a designer. Happily, <a href="http://www.colourco.de/" target="_blank">Colourco.de</a> offers a great way of finding a colour schemes for your next design. Move your cursor left to right to change the hue, and up or down to change the lightness. The menu gives you options for different colour schemes, including monochromatic, anagogic, and complementary.
+                        </p>
+                        <p class="twit">
+                        
+                            <a href="https://twitter.com/navdiskz" class="twitter-follow-button" data-show-count="true" data-lang="en" data-size="small">Follow @navdiskz</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            
+                        </p>
+                        <p>
+                        <a class="uk-button uk-button-primary" href="#top">Back To Top</a>
+
+                        </p>
+                        
+
+
+                    </article>
+
+                   
+
+                    <ul class="uk-pagination">
+                        <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                        <li class="uk-active"><span>1</span></li>
+                        
+                        <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                    </ul>
+
+                </div>
+
+                <div class="uk-width-medium-1-4">
+                    <div class="uk-panel uk-panel-box uk-text-center">
+                        <div class="uk-thumbnail uk-overlay-toggle uk-border-circle">
+                        <div class="uk-overlay">
+                            <img class="uk-border-circle" width="160" height="160" src="img/me4.jpg" alt="naveen" title="Naveen Kumar">
+                            <div class="uk-overlay-area uk-border-circle">
+                                <div class="uk-overlay-area-content">
+                                    <a href="mailto:naveen@naveendiskz.com" class="uk-icon-button uk-icon-envelope"></a>
+                                    <a href="https://www.twitter.com/navdiskZ" target="_blank" class="uk-icon-button uk-icon-twitter "></a>
+                                    <a href="https://www.facebook.com/navdiskZ" target="_blank" class="uk-icon-button uk-icon-facebook"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <h3><a style="text-decoration:none;">NAVEEN KUMAR</a></h3>
+                        <p>I'm Passionate About Developing Beautiful Themes, UI-UX Design's, logo and the web template's</p>
+                         
+                    </div>
+                    <div class="uk-panel">
+                        <h3 class="uk-panel-title">Archives</h3>
+                        <ul class="uk-list uk-list-line">
+                            <li><a href="#">April 2014</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="uk-panel">
+                        <h3 class="uk-panel-title">Social Links <a class="uk-icon-globe"></a></h3>
+                        <ul class="uk-list">
+                            <li><a href="https://www.github.com/navdiskz" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.twitter.com/navdiskz" target="_blank">Twitter</a></li>
+                            <li><a href="https://www.facebook.com/navdiskz" target="_blank">Facebook</a></li>
+                            <li class="back-to-top"><a href="#top">back to top</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+
+   
+
+    <script src="res/js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="res/js/bootstrap.min.js" type="text/javascript"></script>
+  </body>
+</html>
