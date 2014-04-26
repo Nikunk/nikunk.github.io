@@ -56,6 +56,11 @@ margin-top: 10%!important;
 	margin-left: 150px !important;
 }
 
+.uk-width-medium-1-4.uk-push-1-4.uk-text-center
+{
+	margin-top: 7% !important;
+}
+
  #map_canvas {
         width: 270px;
         height: 275px;
